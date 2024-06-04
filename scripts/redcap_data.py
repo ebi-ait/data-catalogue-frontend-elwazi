@@ -3,7 +3,7 @@ import requests
 
 
 schema = {
-    'token': '7E92F601EA5072A0C0BC7923899888B5',
+    'token': '-',
     'content': 'metadata',
     'format': 'json',
     'returnFormat': 'json',
@@ -41,7 +41,7 @@ for record in redcap_schema:
 
 # This section copies project metadata from project events to dataset events in REDCap using the list
 for record in records:
-    if (record["redcap_event_name"] == "Project Info"):
+    if (record["redcap_event_name"] == "Project"):
         # print(record["record_id"] + ": " + record["redcap_event_name"])
         test_dict = {key:record[key] for key in form_fields}
     elif (record["redcap_event_name"] == "Dataset"):
