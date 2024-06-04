@@ -3,7 +3,7 @@ import requests
 
 
 schema = {
-    'token': '-',
+    'token': '7E92F601EA5072A0C0BC7923899888B5',
     'content': 'metadata',
     'format': 'json',
     'returnFormat': 'json',
@@ -61,7 +61,7 @@ datasets = []
 
 # This section splits the redcap json into projects and datasets for the catalogue to display
 for record in records:
-     if record["redcap_event_name"] == "Project Info":
+     if record["redcap_event_name"] == "Project":
          projects.append(record)
      elif record["redcap_event_name"] == "Dataset":
          datasets.append(record)
